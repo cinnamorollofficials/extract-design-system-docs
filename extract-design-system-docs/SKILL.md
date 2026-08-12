@@ -1,6 +1,6 @@
 ---
 name: extract-design-system-docs
-description: Analyzes 3 to 5 URLs from a single website or product, captures desktop and mobile rendered evidence, normalizes primitive and semantic design tokens, infers reusable components, and generates a single standalone index.html design system documentation with live previews and code snippets.
+description: Analyzes 3 to 5 URLs from a single website or product, captures desktop and mobile rendered evidence, normalizes design tokens, infers reusable components, and uses AI agent design reasoning to produce a standalone index.html documentation file with live previews and code snippets.
 ---
 
 # Extract Design System Docs
@@ -30,35 +30,33 @@ Analyze 3–5 web pages from a single website/product and generate a single-file
 ## Workflow Steps
 
 ### Step 1: Capture Evidence
-Run page capture script across the 3–5 target URLs:
+Run page capture script across the target 3–5 URLs:
 ```bash
-node extract-design-system-docs/scripts/capture-pages.mjs --urls "https://example.com/1,https://example.com/2,https://example.com/3"
+node extract-design-system-docs/scripts/capture-pages.mjs --urls "https://example.com/1,https://example.com/2,https://example.com/3" --output ./output
 ```
-Refer to [capture-workflow.md](file:///Users/hadiyahku/code/ds-skill/extract-design-system-docs/references/capture-workflow.md) for details on DOM, computed style, and viewport capture logic.
 
-### Step 2: Normalize Design Tokens
-Process captured raw evidence to produce primitive and semantic tokens:
+### Step 2: Normalize Tokens & AI Design Synthesis
+Run token normalization to generate primitive scales:
 ```bash
-node extract-design-system-docs/scripts/normalize-tokens.mjs
+node extract-design-system-docs/scripts/normalize-tokens.mjs --input ./output/evidence --output ./output
 ```
-Refer to [token-inference.md](file:///Users/hadiyahku/code/ds-skill/extract-design-system-docs/references/token-inference.md) for color, typography, spacing, radius, and shadow clustering guidelines.
+**AI Agent Enhancement**: Inspect `tokens.json` to assign brand-aware semantic token names (e.g., mapping brand hex colors to `--color-brand-primary`), organize spacing scales, and document design intent.
 
-### Step 3: Infer UI Components
-Group repeating DOM subtrees into reusable UI components, variants, and observed states:
+### Step 3: Component Inference & Creative Refactoring
+Run component inference:
 ```bash
-node extract-design-system-docs/scripts/infer-components.mjs
+node extract-design-system-docs/scripts/infer-components.mjs --input ./output/evidence --output ./output
 ```
-Refer to [component-inference.md](file:///Users/hadiyahku/code/ds-skill/extract-design-system-docs/references/component-inference.md) for component anatomy and variant matrix rules.
+**AI Agent Enhancement**: Inspect `components.json`. Refactor raw element HTML into clean, modern, accessible HTML5 component templates (e.g. semantic buttons, input fields, cards, navbars) and write human-readable usage guidelines & accessibility tips.
 
 ### Step 4: Generate Standalone HTML Documentation
 Build the single-file `index.html` documentation bundle:
 ```bash
-node extract-design-system-docs/scripts/generate-docs.mjs --output ./output/index.html
+node extract-design-system-docs/scripts/generate-docs.mjs --input ./output --output ./output/index.html
 ```
-Refer to [html-output-contract.md](file:///Users/hadiyahku/code/ds-skill/extract-design-system-docs/references/html-output-contract.md) for documentation shell layout, Shadow DOM preview isolation, and snippet requirements.
 
 ### Step 5: Validate Output
-Validate the generated HTML file:
+Validate the final HTML output document:
 ```bash
 node extract-design-system-docs/scripts/validate-output.mjs --input ./output/index.html
 ```

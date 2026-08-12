@@ -9,7 +9,8 @@
     "normalize": "node extract-design-system-docs/scripts/normalize-tokens.mjs",
     "infer": "node extract-design-system-docs/scripts/infer-components.mjs",
     "generate": "node extract-design-system-docs/scripts/generate-docs.mjs",
-    "validate": "node extract-design-system-docs/scripts/validate-output.mjs"
+    "validate": "node extract-design-system-docs/scripts/validate-output.mjs",
+    "test": "node test/pipeline.test.mjs"
   },
   "keywords": [
     "design-system",

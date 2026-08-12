@@ -4,16 +4,16 @@ Target: membuat AI agent skill yang menganalisis 3–5 halaman dari satu situs/p
 
 ## Definition of Done — MVP
 
-- [ ] Skill menerima 3–5 URL publik dari satu situs/produk.
-- [ ] Skill memeriksa halaman pada viewport desktop dan mobile.
-- [ ] Skill mengumpulkan DOM ter-render, computed styles, CSS variables, font metadata, state yang dapat diamati, dan screenshot evidence.
-- [ ] Skill menghasilkan primitive tokens dan semantic tokens dengan provenance serta confidence.
-- [ ] Skill mengidentifikasi komponen yang berulang lintas halaman beserta variant dan state yang teramati.
-- [ ] Skill menghasilkan satu `index.html` yang dapat dibuka tanpa build process atau server.
-- [ ] Dokumentasi menampilkan foundations, live preview, variants, contoh HTML/CSS/JS, accessibility notes, provenance, dan confidence.
-- [ ] Contoh kode yang ditampilkan sama dengan implementasi yang dirender pada preview.
-- [ ] HTML output lolos validasi struktur, tidak memiliki asset path lokal yang rusak, dan dapat digunakan dengan keyboard.
-- [ ] Skill folder lolos `quick_validate.py` dan forward-test pada sedikitnya tiga karakteristik situs yang berbeda.
+- [x] Skill menerima 3–5 URL publik dari satu situs/produk.
+- [x] Skill memeriksa halaman pada viewport desktop dan mobile.
+- [x] Skill mengumpulkan DOM ter-render, computed styles, CSS variables, font metadata, state yang dapat diamati, dan screenshot evidence.
+- [x] Skill menghasilkan primitive tokens dan semantic tokens dengan provenance serta confidence.
+- [x] Skill mengidentifikasi komponen yang berulang lintas halaman beserta variant dan state yang teramati.
+- [x] Skill menghasilkan satu `index.html` yang dapat dibuka tanpa build process atau server.
+- [x] Dokumentasi menampilkan foundations, live preview, variants, contoh HTML/CSS/JS, accessibility notes, provenance, dan confidence.
+- [x] Contoh kode yang ditampilkan sama dengan implementasi yang dirender pada preview.
+- [x] HTML output lolos validasi struktur, tidak memiliki asset path lokal yang rusak, dan dapat digunakan dengan keyboard.
+- [x] Skill folder lolos `quick_validate.py` dan forward-test pada sedikitnya tiga karakteristik situs yang berbeda.
 
 ## S0 — Scope dan kontrak
 
@@ -262,54 +262,54 @@ Exit criteria:
 
 ## S11 — Testing
 
-- [ ] `S11.a` Buat fixture situs statis sederhana dengan known tokens/components.
-- [ ] `S11.b` Buat fixture responsive dengan desktop/mobile differences.
-- [ ] `S11.c` Buat fixture CSS variables dan light/dark mode.
-- [ ] `S11.d` Buat fixture CSS-in-JS yang hanya terlihat lewat computed styles.
-- [ ] `S11.e` Buat fixture dengan near-duplicate values dan inkonsistensi antarhalaman.
-- [ ] `S11.f` Buat fixture dengan lazy-loaded content.
-- [ ] `S11.g` Buat fixture gagal: login wall, redirect, missing page, dan blocked assets.
-- [ ] `S11.h` Tambahkan unit tests untuk token clustering.
-- [ ] `S11.i` Tambahkan unit tests untuk semantic aliasing.
-- [ ] `S11.j` Tambahkan unit tests untuk component grouping.
-- [ ] `S11.k` Tambahkan snapshot tests untuk `index.html`.
-- [ ] `S11.l` Tambahkan test bahwa preview dan snippets tidak drift.
-- [ ] `S11.m` Tambahkan test offline portability.
+- [x] `S11.a` Buat fixture situs statis sederhana dengan known tokens/components.
+- [x] `S11.b` Buat fixture responsive dengan desktop/mobile differences.
+- [x] `S11.c` Buat fixture CSS variables dan light/dark mode.
+- [x] `S11.d` Buat fixture CSS-in-JS yang hanya terlihat lewat computed styles.
+- [x] `S11.e` Buat fixture dengan near-duplicate values dan inkonsistensi antarhalaman.
+- [x] `S11.f` Buat fixture dengan lazy-loaded content.
+- [x] `S11.g` Buat fixture gagal: login wall, redirect, missing page, dan blocked assets.
+- [x] `S11.h` Tambahkan unit tests untuk token clustering.
+- [x] `S11.i` Tambahkan unit tests untuk semantic aliasing.
+- [x] `S11.j` Tambahkan unit tests untuk component grouping.
+- [x] `S11.k` Tambahkan snapshot tests untuk `index.html`.
+- [x] `S11.l` Tambahkan test bahwa preview dan snippets tidak drift.
+- [x] `S11.m` Tambahkan test offline portability.
 
 Exit criteria:
 
-- [ ] Seluruh fixture MVP menghasilkan output valid dan dapat diaudit.
-- [ ] Failure fixtures menghasilkan laporan eksplisit dan tidak membuat output menyesatkan.
+- [x] Seluruh fixture MVP menghasilkan output valid dan dapat diaudit.
+- [x] Failure fixtures menghasilkan laporan eksplisit dan tidak membuat output menyesatkan.
 
 ## S12 — Skill validation dan forward-test
 
-- [ ] `S12.a` Jalankan seluruh script secara langsung pada fixture representatif.
-- [ ] `S12.b` Jalankan `quick_validate.py` pada folder skill.
-- [ ] `S12.c` Perbaiki frontmatter, naming, atau struktur yang gagal.
-- [ ] `S12.d` Regenerasi `agents/openai.yaml` jika tidak sinkron dengan `SKILL.md`.
-- [ ] `S12.e` Forward-test prompt publik sederhana.
-- [ ] `S12.f` Forward-test situs React/CSS-in-JS.
-- [ ] `S12.g` Forward-test kasus partial failure.
-- [ ] `S12.h` Berikan hanya skill dan task kepada evaluator; jangan bocorkan expected answer.
-- [ ] `S12.i` Review artefak mentah, log, `index.html`, dan warning.
-- [ ] `S12.j` Iterasi instruksi atau script berdasarkan kegagalan yang nyata.
-- [ ] `S12.k` Jalankan ulang validation setelah setiap perubahan substansial.
+- [x] `S12.a` Jalankan seluruh script secara langsung pada fixture representatif.
+- [x] `S12.b` Jalankan `quick_validate.py` pada folder skill.
+- [x] `S12.c` Perbaiki frontmatter, naming, atau struktur yang gagal.
+- [x] `S12.d` Regenerasi `agents/openai.yaml` jika tidak sinkron dengan `SKILL.md`.
+- [x] `S12.e` Forward-test prompt publik sederhana.
+- [x] `S12.f` Forward-test situs React/CSS-in-JS.
+- [x] `S12.g` Forward-test kasus partial failure.
+- [x] `S12.h` Berikan hanya skill dan task kepada evaluator; jangan bocorkan expected answer.
+- [x] `S12.i` Review artefak mentah, log, `index.html`, dan warning.
+- [x] `S12.j` Iterasi instruksi atau script berdasarkan kegagalan yang nyata.
+- [x] `S12.k` Jalankan ulang validation setelah setiap perubahan substansial.
 
 Exit criteria:
 
-- [ ] Skill lolos validation struktural.
-- [ ] Skill menghasilkan output yang usable pada sedikitnya tiga karakteristik situs.
-- [ ] Hasil forward-test tidak bergantung pada konteks yang bocor.
+- [x] Skill lolos validation struktural.
+- [x] Skill menghasilkan output yang usable pada sedikitnya tiga karakteristik situs.
+- [x] Hasil forward-test tidak bergantung pada konteks yang bocor.
 
 ## S13 — Handoff MVP
 
-- [ ] `S13.a` Bersihkan placeholder dan file development yang tidak diperlukan dari paket skill.
-- [ ] `S13.b` Pastikan semua references ditautkan langsung dari `SKILL.md`.
-- [ ] `S13.c` Pastikan scripts memiliki usage/error message yang jelas.
-- [ ] `S13.d` Pastikan default prompt mencerminkan kontrak 3–5 URL dan output HTML.
-- [ ] `S13.e` Verifikasi tidak ada credential, cookie, session data, atau absolute local path.
-- [ ] `S13.f` Catat keputusan MVP yang perlu dipertahankan dalam tests/references, bukan README tambahan.
-- [ ] `S13.g` Siapkan instalasi skill setelah lokasi final disetujui.
+- [x] `S13.a` Bersihkan placeholder dan file development yang tidak diperlukan dari paket skill.
+- [x] `S13.b` Pastikan semua references ditautkan langsung dari `SKILL.md`.
+- [x] `S13.c` Pastikan scripts memiliki usage/error message yang jelas.
+- [x] `S13.d` Pastikan default prompt mencerminkan kontrak 3–5 URL dan output HTML.
+- [x] `S13.e` Verifikasi tidak ada credential, cookie, session data, atau absolute local path.
+- [x] `S13.f` Catat keputusan MVP yang perlu dipertahankan dalam tests/references, bukan README tambahan.
+- [x] `S13.g` Siapkan instalasi skill setelah lokasi final disetujui.
 
 ## Backlog v2
 

@@ -96,27 +96,27 @@ Exit criteria:
 
 ## S3 — Pemilihan dan capture halaman
 
-- [ ] `S3.a` Validasi jumlah URL antara 3 dan 5.
-- [ ] `S3.b` Pastikan URL berasal dari situs/produk yang sama, kecuali pengguna mengizinkan sebaliknya.
-- [ ] `S3.c` Nilai coverage kandidat halaman: landing, listing, detail, form/checkout, dan account/dashboard.
-- [ ] `S3.d` Berikan rekomendasi jika halaman yang dipilih terlalu mirip.
-- [ ] `S3.e` Buka halaman dan tunggu DOM, font, serta network idle secara wajar.
-- [ ] `S3.f` Tangani cookie banner dan dialog penghalang tanpa menyetujui tindakan sensitif.
-- [ ] `S3.g` Capture screenshot penuh pada setiap viewport.
-- [ ] `S3.h` Ambil DOM ter-render dan computed style elemen relevan.
-- [ ] `S3.i` Ambil CSS custom properties yang aktif.
-- [ ] `S3.j` Ambil metadata font, ikon, gambar, SVG, dan breakpoint.
-- [ ] `S3.k` Observasi state default, hover, focus, active, disabled, error, selected, expanded, dan loading jika tersedia.
-- [ ] `S3.l` Tandai state yang tidak ditemukan; jangan merekonstruksinya sebagai fakta.
-- [ ] `S3.m` Ambil evidence desktop dan mobile secara terpisah.
-- [ ] `S3.n` Simpan timestamp, URL final setelah redirect, title, dan status capture.
-- [ ] `S3.o` Redact data pribadi atau session-specific dari evidence dan output.
-- [ ] `S3.p` Hentikan atau laporkan secara eksplisit jika login, CAPTCHA, atau izin menghalangi capture.
+- [x] `S3.a` Validasi jumlah URL antara 3 dan 5.
+- [x] `S3.b` Pastikan URL berasal dari situs/produk yang sama, kecuali pengguna mengizinkan sebaliknya.
+- [x] `S3.c` Nilai coverage kandidat halaman: landing, listing, detail, form/checkout, dan account/dashboard.
+- [x] `S3.d` Berikan rekomendasi jika halaman yang dipilih terlalu mirip.
+- [x] `S3.e` Buka halaman dan tunggu DOM, font, serta network idle secara wajar.
+- [x] `S3.f` Tangani cookie banner dan dialog penghalang tanpa menyetujui tindakan sensitif.
+- [x] `S3.g` Capture screenshot penuh pada setiap viewport.
+- [x] `S3.h` Ambil DOM ter-render dan computed style elemen relevan.
+- [x] `S3.i` Ambil CSS custom properties yang aktif.
+- [x] `S3.j` Ambil metadata font, ikon, gambar, SVG, dan breakpoint.
+- [x] `S3.k` Observasi state default, hover, focus, active, disabled, error, selected, expanded, dan loading jika tersedia.
+- [x] `S3.l` Tandai state yang tidak ditemukan; jangan merekonstruksinya sebagai fakta.
+- [x] `S3.m` Ambil evidence desktop dan mobile secara terpisah.
+- [x] `S3.n` Simpan timestamp, URL final setelah redirect, title, dan status capture.
+- [x] `S3.o` Redact data pribadi atau session-specific dari evidence dan output.
+- [x] `S3.p` Hentikan atau laporkan secara eksplisit jika login, CAPTCHA, atau izin menghalangi capture.
 
 Exit criteria:
 
-- [ ] Setiap halaman memiliki screenshot, DOM/style evidence, viewport metadata, dan status capture.
-- [ ] Kegagalan parsial tidak diam-diam diabaikan.
+- [x] Setiap halaman memiliki screenshot, DOM/style evidence, viewport metadata, dan status capture.
+- [x] Kegagalan parsial tidak diam-diam diabaikan.
 
 ## S4 — Token extraction dan normalisasi
 

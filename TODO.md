@@ -76,23 +76,23 @@ Exit criteria:
 
 ## S2 — Schema dan intermediate evidence
 
-- [ ] `S2.a` Definisikan job configuration schema.
-- [ ] `S2.b` Definisikan page evidence schema.
-- [ ] `S2.c` Definisikan raw style observation schema.
-- [ ] `S2.d` Definisikan primitive token schema.
-- [ ] `S2.e` Definisikan semantic token dan alias schema.
-- [ ] `S2.f` Definisikan component, anatomy, variant, size, dan state schema.
-- [ ] `S2.g` Definisikan source provenance sampai level URL, viewport, selector/node, property, dan observed value.
-- [ ] `S2.h` Definisikan confidence enum: `confirmed`, `inferred`, `speculative`.
-- [ ] `S2.i` Definisikan conflict schema untuk perbedaan nilai antarhalaman.
-- [ ] `S2.j` Definisikan exclusion schema untuk data yang sengaja tidak digunakan.
-- [ ] `S2.k` Buat fixture JSON kecil untuk setiap schema.
-- [ ] `S2.l` Tambahkan schema validation pada boundary setiap script.
+- [x] `S2.a` Definisikan job configuration schema.
+- [x] `S2.b` Definisikan page evidence schema.
+- [x] `S2.c` Definisikan raw style observation schema.
+- [x] `S2.d` Definisikan primitive token schema.
+- [x] `S2.e` Definisikan semantic token dan alias schema.
+- [x] `S2.f` Definisikan component, anatomy, variant, size, dan state schema.
+- [x] `S2.g` Definisikan source provenance sampai level URL, viewport, selector/node, property, dan observed value.
+- [x] `S2.h` Definisikan confidence enum: `confirmed`, `inferred`, `speculative`.
+- [x] `S2.i` Definisikan conflict schema untuk perbedaan nilai antarhalaman.
+- [x] `S2.j` Definisikan exclusion schema untuk data yang sengaja tidak digunakan.
+- [x] `S2.k` Buat fixture JSON kecil untuk setiap schema.
+- [x] `S2.l` Tambahkan schema validation pada boundary setiap script.
 
 Exit criteria:
 
-- [ ] Semua hasil inferensi dapat dilacak kembali ke evidence sumber.
-- [ ] Script menolak input intermediate yang tidak valid dengan error yang jelas.
+- [x] Semua hasil inferensi dapat dilacak kembali ke evidence sumber.
+- [x] Script menolak input intermediate yang tidak valid dengan error yang jelas.
 
 ## S3 — Pemilihan dan capture halaman
 

@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ComponentsInventory",
+  "type": "object",
+  "required": ["components"],
+  "properties": {
+    "components": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "category", "confidence", "anatomy", "variants"],
+        "properties": {
+          "name": { "type": "string" },
+          "category": { "type": "string" },
+          "usageCount": { "type": "integer" },
+          "confidence": {
+            "type": "string",
+            "enum": ["confirmed", "inferred", "speculative"]
+          },
+          "anatomy": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "slotName": { "type": "string" },
+                "description": { "type": "string" }
+              }
+            }
+          },
+          "variants": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": { "type": "string" },
+                "values": { "type": "array", "items": { "type": "string" } }
+              }
+            }
+          },
+          "observedStates": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "htmlTemplate": { "type": "string" },
+          "cssRules": { "type": "string" },
+          "provenance": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "sourceUrl": { "type": "string" },
+                "viewport": { "type": "string" },
+                "selector": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

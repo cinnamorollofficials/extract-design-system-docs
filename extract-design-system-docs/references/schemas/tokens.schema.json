@@ -1,0 +1,69 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "TokensModel",
+  "type": "object",
+  "required": ["primitives", "semantics"],
+  "properties": {
+    "primitives": {
+      "type": "object",
+      "properties": {
+        "colors": { "type": "object" },
+        "typography": { "type": "object" },
+        "spacing": { "type": "object" },
+        "radii": { "type": "object" },
+        "shadows": { "type": "object" }
+      }
+    },
+    "semantics": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "role", "primitiveRef", "confidence", "provenance"],
+        "properties": {
+          "name": { "type": "string" },
+          "role": { "type": "string" },
+          "primitiveRef": { "type": "string" },
+          "confidence": {
+            "type": "string",
+            "enum": ["confirmed", "inferred", "speculative"]
+          },
+          "provenance": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["sourceUrl", "viewport", "selector", "cssProperty", "observedValue"],
+              "properties": {
+                "sourceUrl": { "type": "string" },
+                "viewport": { "type": "string" },
+                "selector": { "type": "string" },
+                "cssProperty": { "type": "string" },
+                "observedValue": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "conflicts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "tokenName": { "type": "string" },
+          "reason": { "type": "string" },
+          "variations": { "type": "array" }
+        }
+      }
+    },
+    "exclusions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "string" },
+          "reason": { "type": "string" }
+        }
+      }
+    }
+  }
+}

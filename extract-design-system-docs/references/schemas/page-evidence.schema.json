@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PageEvidence",
+  "type": "object",
+  "required": ["pageUrl", "finalUrl", "viewport", "elements"],
+  "properties": {
+    "pageUrl": { "type": "string", "format": "uri" },
+    "finalUrl": { "type": "string", "format": "uri" },
+    "title": { "type": "string" },
+    "timestamp": { "type": "string" },
+    "viewport": { "type": "string" },
+    "screenshotPath": { "type": "string" },
+    "cssVariables": {
+      "type": "object",
+      "additionalProperties": { "type": "string" }
+    },
+    "fontFamilies": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "elements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["selector", "tagName", "computedStyle"],
+        "properties": {
+          "selector": { "type": "string" },
+          "tagName": { "type": "string" },
+          "text": { "type": "string" },
+          "computedStyle": {
+            "type": "object",
+            "additionalProperties": { "type": "string" }
+          },
+          "attributes": {
+            "type": "object",
+            "additionalProperties": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}

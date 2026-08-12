@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "JobConfig",
+  "type": "object",
+  "required": ["targetUrls", "viewports"],
+  "properties": {
+    "targetUrls": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 5,
+      "items": { "type": "string", "format": "uri" }
+    },
+    "viewports": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "width", "height"],
+        "properties": {
+          "name": { "type": "string" },
+          "width": { "type": "integer", "minimum": 320 },
+          "height": { "type": "integer", "minimum": 400 }
+        }
+      }
+    },
+    "outputDirectory": {
+      "type": "string",
+      "default": "./output"
+    },
+    "policy": {
+      "type": "object",
+      "properties": {
+        "redactPII": { "type": "boolean", "default": true },
+        "allowExternalAssets": { "type": "boolean", "default": false }
+      }
+    }
+  }
+}

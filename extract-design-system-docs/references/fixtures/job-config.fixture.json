@@ -1,0 +1,16 @@
+{
+  "targetUrls": [
+    "https://example.com/",
+    "https://example.com/pricing",
+    "https://example.com/about"
+  ],
+  "viewports": [
+    { "name": "desktop", "width": 1440, "height": 900 },
+    { "name": "mobile", "width": 390, "height": 844 }
+  ],
+  "outputDirectory": "./output",
+  "policy": {
+    "redactPII": true,
+    "allowExternalAssets": false
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "pageUrl": "https://example.com/pricing",
+  "finalUrl": "https://example.com/pricing",
+  "title": "Pricing — Example App",
+  "timestamp": "2026-08-12T16:00:00Z",
+  "viewport": "desktop",
+  "screenshotPath": "./output/screenshots/desktop_pricing.png",
+  "cssVariables": {
+    "--color-primary": "#0d6efd",
+    "--color-surface": "#ffffff"
+  },
+  "fontFamilies": ["Inter", "system-ui", "sans-serif"],
+  "elements": [
+    {
+      "selector": "main > section.pricing-cards > div.card:nth-child(1) > button.btn-primary",
+      "tagName": "BUTTON",
+      "text": "Choose Plan",
+      "computedStyle": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(13, 110, 253)",
+        "borderRadius": "8px",
+        "fontSize": "16px",
+        "fontWeight": "600",
+        "paddingTop": "12px",
+        "paddingBottom": "12px",
+        "paddingLeft": "24px",
+        "paddingRight": "24px"
+      },
+      "attributes": {
+        "class": "btn btn-primary btn-md",
+        "type": "button"
+      }
+    }
+  ]
+}

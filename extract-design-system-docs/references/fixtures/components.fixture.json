@@ -1,0 +1,33 @@
+{
+  "components": [
+    {
+      "name": "Button",
+      "category": "Inputs & Actions",
+      "usageCount": 12,
+      "confidence": "confirmed",
+      "anatomy": [
+        { "slotName": "label", "description": "Text label content" }
+      ],
+      "variants": [
+        {
+          "name": "variant",
+          "values": ["primary", "secondary", "outline"]
+        },
+        {
+          "name": "size",
+          "values": ["sm", "md", "lg"]
+        }
+      ],
+      "observedStates": ["default", "hover", "focus", "disabled"],
+      "htmlTemplate": "<button class=\"btn btn-primary btn-md\">Button Label</button>",
+      "cssRules": ".btn { display: inline-flex; align-items: center; justify-content: center; padding: 12px 24px; border-radius: 8px; font-weight: 600; cursor: pointer; } .btn-primary { background-color: var(--color-action-primary, #0d6efd); color: #ffffff; border: none; }",
+      "provenance": [
+        {
+          "sourceUrl": "https://example.com/pricing",
+          "viewport": "desktop",
+          "selector": "button.btn-primary"
+        }
+      ]
+    }
+  ]
+}

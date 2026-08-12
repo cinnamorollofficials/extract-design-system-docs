@@ -1,0 +1,39 @@
+{
+  "primitives": {
+    "colors": {
+      "blue-500": "#0d6efd",
+      "white": "#ffffff"
+    },
+    "typography": {
+      "font-family-base": "Inter, system-ui, sans-serif",
+      "font-size-md": "16px"
+    },
+    "spacing": {
+      "space-3": "12px",
+      "space-6": "24px"
+    },
+    "radii": {
+      "radius-md": "8px"
+    },
+    "shadows": {}
+  },
+  "semantics": [
+    {
+      "name": "color-action-primary",
+      "role": "brand primary interactive button background",
+      "primitiveRef": "blue-500",
+      "confidence": "confirmed",
+      "provenance": [
+        {
+          "sourceUrl": "https://example.com/pricing",
+          "viewport": "desktop",
+          "selector": "button.btn-primary",
+          "cssProperty": "backgroundColor",
+          "observedValue": "rgb(13, 110, 253)"
+        }
+      ]
+    }
+  ],
+  "conflicts": [],
+  "exclusions": []
+}

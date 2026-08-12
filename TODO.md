@@ -120,47 +120,47 @@ Exit criteria:
 
 ## S4 — Token extraction dan normalisasi
 
-- [ ] `S4.a` Inventarisasi warna solid, gradient, opacity, border, dan shadow.
-- [ ] `S4.b` Inventarisasi font family, size, weight, line-height, letter-spacing, dan text transform.
-- [ ] `S4.c` Inventarisasi spacing, dimension, radius, stroke width, dan layout gap.
-- [ ] `S4.d` Pisahkan nilai dekoratif satu kali dari kandidat token reusable.
-- [ ] `S4.e` Cluster exact duplicates.
-- [ ] `S4.f` Cluster near-duplicates dengan threshold yang dapat dijelaskan.
-- [ ] `S4.g` Jangan otomatis menyatukan nilai dekat tanpa menyimpan nilai asli dan alasan konsolidasi.
-- [ ] `S4.h` Bentuk primitive scales untuk color, spacing, radius, size, dan opacity.
-- [ ] `S4.i` Infer semantic roles dari konteks penggunaan, bukan dari nilai saja.
-- [ ] `S4.j` Alias semantic tokens ke primitives.
-- [ ] `S4.k` Deteksi light/dark mode hanya jika terdapat evidence.
-- [ ] `S4.l` Hasilkan CSS custom property names yang deterministik.
-- [ ] `S4.m` Catat usage count dan source pages per token.
-- [ ] `S4.n` Beri confidence pada setiap semantic inference.
-- [ ] `S4.o` Buat report konflik token antarhalaman.
+- [x] `S4.a` Inventarisasi warna solid, gradient, opacity, border, dan shadow.
+- [x] `S4.b` Inventarisasi font family, size, weight, line-height, letter-spacing, dan text transform.
+- [x] `S4.c` Inventarisasi spacing, dimension, radius, stroke width, dan layout gap.
+- [x] `S4.d` Pisahkan nilai dekoratif satu kali dari kandidat token reusable.
+- [x] `S4.e` Cluster exact duplicates.
+- [x] `S4.f` Cluster near-duplicates dengan threshold yang dapat dijelaskan.
+- [x] `S4.g` Jangan otomatis menyatukan nilai dekat tanpa menyimpan nilai asli dan alasan konsolidasi.
+- [x] `S4.h` Bentuk primitive scales untuk color, spacing, radius, size, dan opacity.
+- [x] `S4.i` Infer semantic roles dari konteks penggunaan, bukan dari nilai saja.
+- [x] `S4.j` Alias semantic tokens ke primitives.
+- [x] `S4.k` Deteksi light/dark mode hanya jika terdapat evidence.
+- [x] `S4.l` Hasilkan CSS custom property names yang deterministik.
+- [x] `S4.m` Catat usage count dan source pages per token.
+- [x] `S4.n` Beri confidence pada setiap semantic inference.
+- [x] `S4.o` Buat report konflik token antarhalaman.
 
 Exit criteria:
 
-- [ ] Tidak ada semantic token yang kehilangan primitive alias atau provenance.
-- [ ] Near-duplicate merge dapat diaudit dan dibatalkan.
+- [x] Tidak ada semantic token yang kehilangan primitive alias atau provenance.
+- [x] Near-duplicate merge dapat diaudit dan dibatalkan.
 
 ## S5 — Component inference
 
-- [ ] `S5.a` Identifikasi subtree DOM dan pola visual berulang.
-- [ ] `S5.b` Gabungkan evidence berbasis struktur, style signature, role, dan penggunaan lintas halaman.
-- [ ] `S5.c` Pisahkan komponen reusable dari section atau layout satu kali.
-- [ ] `S5.d` Tentukan nama komponen yang deterministik dan generik.
-- [ ] `S5.e` Infer anatomy dan slot konten.
-- [ ] `S5.f` Infer variant axes seperti style, size, emphasis, dan theme.
-- [ ] `S5.g` Catat hanya state yang benar-benar teramati.
-- [ ] `S5.h` Tandai state rekonstruksi sebagai `speculative`.
-- [ ] `S5.i` Deteksi nested components.
-- [ ] `S5.j` Hindari variant explosion; pecah matrix di atas 30 kombinasi.
-- [ ] `S5.k` Hitung usage count, source pages, dan confidence setiap komponen.
-- [ ] `S5.l` Buat component inventory dan gap report.
-- [ ] `S5.m` Kunci daftar komponen MVP sebelum generator dokumentasi berjalan.
+- [x] `S5.a` Identifikasi subtree DOM dan pola visual berulang.
+- [x] `S5.b` Gabungkan evidence berbasis struktur, style signature, role, dan penggunaan lintas halaman.
+- [x] `S5.c` Pisahkan komponen reusable dari section atau layout satu kali.
+- [x] `S5.d` Tentukan nama komponen yang deterministik dan generik.
+- [x] `S5.e` Infer anatomy dan slot konten.
+- [x] `S5.f` Infer variant axes seperti style, size, emphasis, dan theme.
+- [x] `S5.g` Catat hanya state yang benar-benar teramati.
+- [x] `S5.h` Tandai state rekonstruksi sebagai `speculative`.
+- [x] `S5.i` Deteksi nested components.
+- [x] `S5.j` Hindari variant explosion; pecah matrix di atas 30 kombinasi.
+- [x] `S5.k` Hitung usage count, source pages, dan confidence setiap komponen.
+- [x] `S5.l` Buat component inventory dan gap report.
+- [x] `S5.m` Kunci daftar komponen MVP sebelum generator dokumentasi berjalan.
 
 Exit criteria:
 
-- [ ] Setiap komponen memiliki evidence, anatomy, variant/state coverage, dan confidence.
-- [ ] Pola satu kali tidak disajikan sebagai komponen inti tanpa penandaan.
+- [x] Setiap komponen memiliki evidence, anatomy, variant/state coverage, dan confidence.
+- [x] Pola satu kali tidak disajikan sebagai komponen inti tanpa penandaan.
 
 ## S6 — Documentation shell
 

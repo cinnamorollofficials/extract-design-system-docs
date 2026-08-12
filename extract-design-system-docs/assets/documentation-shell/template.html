@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{DOCUMENT_TITLE}} — Design System Documentation</title>
+  <style>
+    :root {
+      --shell-bg: #0f172a;
+      --shell-surface: #1e293b;
+      --shell-border: #334155;
+      --shell-text: #f8fafc;
+      --shell-text-muted: #94a3b8;
+      --shell-accent: #38bdf8;
+      --shell-accent-hover: #0284c7;
+      --shell-radius: 12px;
+      --shell-font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: var(--shell-font);
+      background-color: var(--shell-bg);
+      color: var(--shell-text);
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 280px;
+      background: var(--shell-surface);
+      border-right: 1px solid var(--shell-border);
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 10;
+    }
+    .sidebar-header {
+      padding: 20px;
+      border-bottom: 1px solid var(--shell-border);
+    }
+    .sidebar-brand {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--shell-text);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .sidebar-nav {
+      flex: 1;
+      overflow-y: auto;
+      padding: 16px 12px;
+    }
+    .nav-group-title {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--shell-text-muted);
+      margin: 16px 12px 8px;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      padding: 8px 12px;
+      color: var(--shell-text-muted);
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 0.875rem;
+      transition: all 0.15s ease;
+    }
+    .nav-link:hover, .nav-link.active {
+      background: rgba(56, 189, 248, 0.1);
+      color: var(--shell-accent);
+    }
+
+    /* Search */
+    .search-box {
+      padding: 12px 20px;
+      border-bottom: 1px solid var(--shell-border);
+    }
+    .search-input {
+      width: 100%;
+      background: var(--shell-bg);
+      border: 1px solid var(--shell-border);
+      padding: 8px 12px;
+      border-radius: 6px;
+      color: var(--shell-text);
+      font-size: 0.875rem;
+    }
+    .search-input:focus {
+      outline: none;
+      border-color: var(--shell-accent);
+    }
+
+    /* Main Content */
+    .main-content {
+      margin-left: 280px;
+      flex: 1;
+      padding: 40px;
+      max-width: 1200px;
+    }
+    .section-header {
+      margin-bottom: 32px;
+      border-bottom: 1px solid var(--shell-border);
+      padding-bottom: 16px;
+    }
+    .section-title {
+      font-size: 2rem;
+      margin: 0 0 8px;
+    }
+    .section-subtitle {
+      color: var(--shell-text-muted);
+      margin: 0;
+    }
+
+    /* Token Cards & Grid */
+    .token-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+    .swatch-card {
+      background: var(--shell-surface);
+      border: 1px solid var(--shell-border);
+      border-radius: var(--shell-radius);
+      overflow: hidden;
+    }
+    .swatch-preview {
+      height: 90px;
+      width: 100%;
+    }
+    .swatch-info {
+      padding: 12px;
+    }
+    .swatch-name {
+      font-weight: 600;
+      font-size: 0.875rem;
+    }
+    .swatch-value {
+      font-size: 0.75rem;
+      color: var(--shell-text-muted);
+    }
+
+    /* Component Section */
+    .component-card {
+      background: var(--shell-surface);
+      border: 1px solid var(--shell-border);
+      border-radius: var(--shell-radius);
+      margin-bottom: 32px;
+      overflow: hidden;
+    }
+    .component-header {
+      padding: 16px 20px;
+      background: rgba(255, 255, 255, 0.02);
+      border-bottom: 1px solid var(--shell-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .component-title {
+      font-size: 1.25rem;
+      margin: 0;
+    }
+    .component-badge {
+      background: rgba(56, 189, 248, 0.15);
+      color: var(--shell-accent);
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .component-preview-box {
+      padding: 32px;
+      background: #ffffff;
+      color: #000000;
+      min-height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .code-box {
+      background: #090d16;
+      padding: 16px 20px;
+      border-top: 1px solid var(--shell-border);
+      position: relative;
+    }
+    .code-box pre {
+      margin: 0;
+      font-family: monospace;
+      font-size: 0.875rem;
+      color: #a5f3fc;
+      overflow-x: auto;
+    }
+    .copy-btn {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: var(--shell-surface);
+      border: 1px solid var(--shell-border);
+      color: var(--shell-text-muted);
+      padding: 6px 12px;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      cursor: pointer;
+    }
+    .copy-btn:hover {
+      color: var(--shell-text);
+      border-color: var(--shell-accent);
+    }
+
+    @media (max-width: 768px) {
+      .sidebar { display: none; }
+      .main-content { margin-left: 0; padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-brand">
+        <span>⚡</span> {{BRAND_NAME}}
+      </div>
+    </div>
+    <div class="search-box">
+      <input type="text" class="search-input" id="searchInput" placeholder="Search tokens & components..." onkeyup="filterDocs()">
+    </div>
+    <nav class="sidebar-nav">
+      <div class="nav-group-title">Foundations</div>
+      <a href="#overview" class="nav-link active">Overview</a>
+      <a href="#colors" class="nav-link">Colors</a>
+      <a href="#typography" class="nav-link">Typography</a>
+      <a href="#spacing" class="nav-link">Spacing & Radius</a>
+
+      <div class="nav-group-title">Components</div>
+      {{SIDEBAR_COMPONENT_LINKS}}
+
+      <div class="nav-group-title">Audit</div>
+      <a href="#audit" class="nav-link">Audit & Provenance</a>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    <section id="overview" class="doc-section">
+      <div class="section-header">
+        <h1 class="section-title">{{BRAND_NAME}} Design System</h1>
+        <p class="section-subtitle">Generated automatically from {{SOURCE_URL_COUNT}} product pages evidence on {{GENERATED_DATE}}</p>
+      </div>
+    </section>
+
+    <section id="colors" class="doc-section">
+      <div class="section-header">
+        <h2 class="section-title">Colors</h2>
+        <p class="section-subtitle">Primitive scale and inferred semantic color roles</p>
+      </div>
+      <div class="token-grid">
+        {{COLOR_SWATCHES_HTML}}
+      </div>
+    </section>
+
+    <section id="components" class="doc-section">
+      <div class="section-header">
+        <h2 class="section-title">Components</h2>
+        <p class="section-subtitle">Inferred reusable UI components with isolated previews and HTML/CSS snippets</p>
+      </div>
+      {{COMPONENTS_SECTION_HTML}}
+    </section>
+
+    <section id="audit" class="doc-section">
+      <div class="section-header">
+        <h2 class="section-title">Audit & Provenance</h2>
+        <p class="section-subtitle">Traceability log mapping design elements back to source URLs and selectors</p>
+      </div>
+      <div class="component-card" style="padding: 20px;">
+        <pre style="color: var(--shell-text-muted); font-size: 0.85rem;">{{AUDIT_LOG_JSON}}</pre>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function filterDocs() {
+      const q = document.getElementById('searchInput').value.toLowerCase();
+      document.querySelectorAll('.component-card, .swatch-card').forEach(card => {
+        const text = card.textContent.toLowerCase();
+        card.style.display = text.includes(q) ? '' : 'none';
+      });
+    }
+
+    function copySnippet(btn, elementId) {
+      const code = document.getElementById(elementId).innerText;
+      navigator.clipboard.writeText(code).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = 'Copied!';
+        setTimeout(() => { btn.innerText = orig; }, 1500);
+      });
+    }
+  </script>
+</body>
+</html>

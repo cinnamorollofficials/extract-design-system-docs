@@ -164,60 +164,60 @@ Exit criteria:
 
 ## S6 — Documentation shell
 
-- [ ] `S6.a` Buat template `index.html` semantik dan responsif.
-- [ ] `S6.b` Tambahkan sidebar navigation.
-- [ ] `S6.c` Tambahkan pencarian client-side.
-- [ ] `S6.d` Tambahkan overview, metadata, URL sumber, coverage, dan confidence summary.
-- [ ] `S6.e` Tambahkan halaman/section Colors.
-- [ ] `S6.f` Tambahkan Typography.
-- [ ] `S6.g` Tambahkan Spacing & Sizing.
-- [ ] `S6.h` Tambahkan Radius, Border, dan Elevation.
-- [ ] `S6.i` Tambahkan Breakpoints dan responsive notes.
-- [ ] `S6.j` Tambahkan audit report, conflicts, exclusions, dan limitations.
-- [ ] `S6.k` Gunakan design tokens dokumentasi sendiri agar shell tidak bentrok dengan design system hasil ekstraksi.
-- [ ] `S6.l` Pastikan halaman tetap usable tanpa JavaScript untuk konten inti.
+- [x] `S6.a` Buat template `index.html` semantik dan responsif.
+- [x] `S6.b` Tambahkan sidebar navigation.
+- [x] `S6.c` Tambahkan pencarian client-side.
+- [x] `S6.d` Tambahkan overview, metadata, URL sumber, coverage, dan confidence summary.
+- [x] `S6.e` Tambahkan halaman/section Colors.
+- [x] `S6.f` Tambahkan Typography.
+- [x] `S6.g` Tambahkan Spacing & Sizing.
+- [x] `S6.h` Tambahkan Radius, Border, dan Elevation.
+- [x] `S6.i` Tambahkan Breakpoints dan responsive notes.
+- [x] `S6.j` Tambahkan audit report, conflicts, exclusions, dan limitations.
+- [x] `S6.k` Gunakan design tokens dokumentasi sendiri agar shell tidak bentrok dengan design system hasil ekstraksi.
+- [x] `S6.l` Pastikan halaman tetap usable tanpa JavaScript untuk konten inti.
 
 Exit criteria:
 
-- [ ] Shell dapat dibuka langsung dari filesystem.
-- [ ] Navigasi dan foundations tetap terbaca di desktop serta mobile.
+- [x] Shell dapat dibuka langsung dari filesystem.
+- [x] Navigasi dan foundations tetap terbaca di desktop serta mobile.
 
 ## S7 — Live component previews
 
-- [ ] `S7.a` Pilih mekanisme isolasi preview: Shadow DOM atau `iframe srcdoc`.
-- [ ] `S7.b` Pastikan CSS preview tidak bocor ke documentation shell.
-- [ ] `S7.c` Render satu preview canonical per komponen.
-- [ ] `S7.d` Render variant gallery.
-- [ ] `S7.e` Tambahkan size controls jika relevan.
-- [ ] `S7.f` Tambahkan state controls tanpa mengklaim state yang tidak teramati.
-- [ ] `S7.g` Tambahkan viewport/responsive controls.
-- [ ] `S7.h` Tambahkan theme toggle hanya jika evidence mendukung.
-- [ ] `S7.i` Gunakan semantic tokens pada seluruh preview.
-- [ ] `S7.j` Pastikan preview tidak memuat script situs sumber.
-- [ ] `S7.k` Pastikan interaksi aman dan tidak mengirim network request.
+- [x] `S7.a` Pilih mekanisme isolasi preview: Shadow DOM atau `iframe srcdoc`.
+- [x] `S7.b` Pastikan CSS preview tidak bocor ke documentation shell.
+- [x] `S7.c` Render satu preview canonical per komponen.
+- [x] `S7.d` Render variant gallery.
+- [x] `S7.e` Tambahkan size controls jika relevan.
+- [x] `S7.f` Tambahkan state controls tanpa mengklaim state yang tidak teramati.
+- [x] `S7.g` Tambahkan viewport/responsive controls.
+- [x] `S7.h` Tambahkan theme toggle hanya jika evidence mendukung.
+- [x] `S7.i` Gunakan semantic tokens pada seluruh preview.
+- [x] `S7.j` Pastikan preview tidak memuat script situs sumber.
+- [x] `S7.k` Pastikan interaksi aman dan tidak mengirim network request.
 
 Exit criteria:
 
-- [ ] Preview terisolasi, interaktif, dan tidak merusak halaman dokumentasi.
-- [ ] Semua control dapat digunakan dengan keyboard.
+- [x] Preview terisolasi, interaktif, dan tidak merusak halaman dokumentasi.
+- [x] Semua control dapat digunakan dengan keyboard.
 
 ## S8 — Contoh kode
 
-- [ ] `S8.a` Hasilkan contoh HTML semantik untuk setiap komponen.
-- [ ] `S8.b` Hasilkan CSS berbasis custom properties.
-- [ ] `S8.c` Hasilkan JavaScript vanilla hanya untuk interaksi yang diperlukan.
-- [ ] `S8.d` Gunakan source template yang sama untuk preview dan code block agar tidak drift.
-- [ ] `S8.e` Tambahkan syntax highlighting tanpa dependency runtime eksternal, jika memungkinkan.
-- [ ] `S8.f` Tambahkan tombol copy untuk setiap snippet.
-- [ ] `S8.g` Tambahkan feedback setelah copy.
-- [ ] `S8.h` Escape code dengan aman untuk mencegah HTML/script injection.
-- [ ] `S8.i` Jangan menyalin source JavaScript proprietary dari situs.
-- [ ] `S8.j` Tambahkan usage guidance dan accessibility notes.
+- [x] `S8.a` Hasilkan contoh HTML semantik untuk setiap komponen.
+- [x] `S8.b` Hasilkan CSS berbasis custom properties.
+- [x] `S8.c` Hasilkan JavaScript vanilla hanya untuk interaksi yang diperlukan.
+- [x] `S8.d` Gunakan source template yang sama untuk preview dan code block agar tidak drift.
+- [x] `S8.e` Tambahkan syntax highlighting tanpa dependency runtime eksternal, jika memungkinkan.
+- [x] `S8.f` Tambahkan tombol copy untuk setiap snippet.
+- [x] `S8.g` Tambahkan feedback setelah copy.
+- [x] `S8.h` Escape code dengan aman untuk mencegah HTML/script injection.
+- [x] `S8.i` Jangan menyalin source JavaScript proprietary dari situs.
+- [x] `S8.j` Tambahkan usage guidance dan accessibility notes.
 
 Exit criteria:
 
-- [ ] Snippet dapat ditempel ke halaman kosong dan menghasilkan komponen yang setara dengan preview.
-- [ ] Preview dan snippet berasal dari satu model sumber.
+- [x] Snippet dapat ditempel ke halaman kosong dan menghasilkan komponen yang setara dengan preview.
+- [x] Preview dan snippet berasal dari satu model sumber.
 
 ## S9 — Single-file generator
 

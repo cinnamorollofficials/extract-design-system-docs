@@ -1,0 +1,28 @@
+{
+  "name": "extract-design-system-docs",
+  "version": "1.0.0",
+  "description": "AI Agent Skill to analyze web pages, extract tokens and components, and produce a standalone index.html design system documentation.",
+  "type": "module",
+  "main": "extract-design-system-docs/scripts/capture-pages.mjs",
+  "scripts": {
+    "capture": "node extract-design-system-docs/scripts/capture-pages.mjs",
+    "normalize": "node extract-design-system-docs/scripts/normalize-tokens.mjs",
+    "infer": "node extract-design-system-docs/scripts/infer-components.mjs",
+    "generate": "node extract-design-system-docs/scripts/generate-docs.mjs",
+    "validate": "node extract-design-system-docs/scripts/validate-output.mjs"
+  },
+  "keywords": [
+    "design-system",
+    "ai-skill",
+    "tokens",
+    "components",
+    "documentation"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "playwright": "^1.50.0"
+  }
+}

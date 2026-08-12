@@ -17,33 +17,33 @@ Target: membuat AI agent skill yang menganalisis 3–5 halaman dari satu situs/p
 
 ## S0 — Scope dan kontrak
 
-- [ ] `S0.a` Tetapkan nama skill; kandidat awal: `extract-design-system-docs`.
-- [ ] `S0.b` Tetapkan lokasi development skill di repository ini.
-- [ ] `S0.c` Definisikan prompt yang harus memicu skill.
-- [ ] `S0.d` Definisikan prompt yang tidak seharusnya memicu skill.
-- [ ] `S0.e` Definisikan input wajib: 3–5 URL dalam satu domain/produk.
-- [ ] `S0.f` Definisikan input opsional: viewport, theme, halaman prioritas, output directory, dan kebijakan aset.
-- [ ] `S0.g` Tetapkan default viewport: desktop `1440×900` dan mobile `390×844`.
-- [ ] `S0.h` Tetapkan output utama: `<output-directory>/index.html`.
-- [ ] `S0.i` Tetapkan bahwa CSS, JavaScript, dan data dokumentasi di-inline secara default.
-- [ ] `S0.j` Definisikan perilaku untuk login wall, CAPTCHA, rate limit, halaman gagal, dan URL lintas domain.
-- [ ] `S0.k` Definisikan aturan aset, font, logo, kode proprietary, dan attribution.
-- [ ] `S0.l` Tetapkan non-goals MVP: canvas, WebGL, video UI, rekonstruksi aplikasi penuh, dan state yang tidak dapat diamati.
+- [x] `S0.a` Tetapkan nama skill; kandidat awal: `extract-design-system-docs`.
+- [x] `S0.b` Tetapkan lokasi development skill di repository ini.
+- [x] `S0.c` Definisikan prompt yang harus memicu skill.
+- [x] `S0.d` Definisikan prompt yang tidak seharusnya memicu skill.
+- [x] `S0.e` Definisikan input wajib: 3–5 URL dalam satu domain/produk.
+- [x] `S0.f` Definisikan input opsional: viewport, theme, halaman prioritas, output directory, dan kebijakan aset.
+- [x] `S0.g` Tetapkan default viewport: desktop `1440×900` dan mobile `390×844`.
+- [x] `S0.h` Tetapkan output utama: `<output-directory>/index.html`.
+- [x] `S0.i` Tetapkan bahwa CSS, JavaScript, dan data dokumentasi di-inline secara default.
+- [x] `S0.j` Definisikan perilaku untuk login wall, CAPTCHA, rate limit, halaman gagal, dan URL lintas domain.
+- [x] `S0.k` Definisikan aturan aset, font, logo, kode proprietary, dan attribution.
+- [x] `S0.l` Tetapkan non-goals MVP: canvas, WebGL, video UI, rekonstruksi aplikasi penuh, dan state yang tidak dapat diamati.
 
 Exit criteria:
 
-- [ ] Kontrak input/output dan batasan MVP tidak ambigu.
-- [ ] Tersedia sedikitnya lima contoh prompt positif dan tiga prompt negatif.
+- [x] Kontrak input/output dan batasan MVP tidak ambigu.
+- [x] Tersedia sedikitnya lima contoh prompt positif dan tiga prompt negatif.
 
 ## S1 — Scaffold skill
 
-- [ ] `S1.a` Baca aturan `agents/openai.yaml` dari skill-creator.
-- [ ] `S1.b` Jalankan `init_skill.py` dengan resources `scripts,references,assets`.
-- [ ] `S1.c` Buat metadata `display_name`, `short_description`, dan `default_prompt`.
-- [ ] `S1.d` Tulis description frontmatter yang mencakup aksi dan trigger skill.
-- [ ] `S1.e` Jaga `SKILL.md` tetap ringkas, prosedural, dan di bawah 500 baris.
-- [ ] `S1.f` Letakkan algoritme, schema, dan aturan rinci di `references/`.
-- [ ] `S1.g` Jangan masukkan README, changelog, installation guide, atau TODO ini ke paket skill final.
+- [x] `S1.a` Baca aturan `agents/openai.yaml` dari skill-creator.
+- [x] `S1.b` Jalankan `init_skill.py` dengan resources `scripts,references,assets`.
+- [x] `S1.c` Buat metadata `display_name`, `short_description`, dan `default_prompt`.
+- [x] `S1.d` Tulis description frontmatter yang mencakup aksi dan trigger skill.
+- [x] `S1.e` Jaga `SKILL.md` tetap ringkas, prosedural, dan di bawah 500 baris.
+- [x] `S1.f` Letakkan algoritme, schema, dan aturan rinci di `references/`.
+- [x] `S1.g` Jangan masukkan README, changelog, installation guide, atau TODO ini ke paket skill final.
 
 Struktur target:
 
@@ -71,8 +71,8 @@ extract-design-system-docs/
 
 Exit criteria:
 
-- [ ] Struktur skill dibuat menggunakan `init_skill.py`.
-- [ ] Tidak ada placeholder atau resource kosong yang tidak dibutuhkan.
+- [x] Struktur skill dibuat menggunakan `init_skill.py`.
+- [x] Tidak ada placeholder atau resource kosong yang tidak dibutuhkan.
 
 ## S2 — Schema dan intermediate evidence
 

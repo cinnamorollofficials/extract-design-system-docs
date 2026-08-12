@@ -1,0 +1,4 @@
+interface:
+  display_name: "Extract Design System Docs"
+  short_description: "Extract design tokens, UI components, and live docs from 3-5 product URLs."
+  default_prompt: "Extract design system documentation from 3-5 product URLs and generate a standalone index.html"

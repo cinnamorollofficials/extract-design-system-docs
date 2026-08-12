@@ -221,44 +221,44 @@ Exit criteria:
 
 ## S9 — Single-file generator
 
-- [ ] `S9.a` Implementasikan `generate-docs.mjs`.
-- [ ] `S9.b` Inline documentation CSS.
-- [ ] `S9.c` Inline component CSS dan token data.
-- [ ] `S9.d` Inline documentation JavaScript.
-- [ ] `S9.e` Embed aset kecil sebagai data URI bila diizinkan.
-- [ ] `S9.f` Gunakan safe placeholder untuk aset yang tidak boleh disertakan.
-- [ ] `S9.g` Hilangkan asset path lokal dan temporary URL.
-- [ ] `S9.h` Tambahkan deterministic ordering untuk tokens dan components.
-- [ ] `S9.i` Tambahkan build metadata tanpa menyertakan data sensitif.
-- [ ] `S9.j` Pastikan generator menghasilkan byte-identical output untuk input identik, kecuali timestamp dinonaktifkan.
-- [ ] `S9.k` Tambahkan opsi `--output <path>` dengan default `./output/index.html`.
+- [x] `S9.a` Implementasikan `generate-docs.mjs`.
+- [x] `S9.b` Inline documentation CSS.
+- [x] `S9.c` Inline component CSS dan token data.
+- [x] `S9.d` Inline documentation JavaScript.
+- [x] `S9.e` Embed aset kecil sebagai data URI bila diizinkan.
+- [x] `S9.f` Gunakan safe placeholder untuk aset yang tidak boleh disertakan.
+- [x] `S9.g` Hilangkan asset path lokal dan temporary URL.
+- [x] `S9.h` Tambahkan deterministic ordering untuk tokens dan components.
+- [x] `S9.i` Tambahkan build metadata tanpa menyertakan data sensitif.
+- [x] `S9.j` Pastikan generator menghasilkan byte-identical output untuk input identik, kecuali timestamp dinonaktifkan.
+- [x] `S9.k` Tambahkan opsi `--output <path>` dengan default `./output/index.html`.
 
 Exit criteria:
 
-- [ ] `index.html` dapat dipindahkan dan dibuka di mesin lain tanpa file pendamping.
-- [ ] Tidak ada request jaringan kecuali aset eksternal yang secara eksplisit diizinkan.
+- [x] `index.html` dapat dipindahkan dan dibuka di mesin lain tanpa file pendamping.
+- [x] Tidak ada request jaringan kecuali aset eksternal yang secara eksplisit diizinkan.
 
 ## S10 — Validation dan accessibility
 
-- [ ] `S10.a` Implementasikan `validate-output.mjs`.
-- [ ] `S10.b` Validasi HTML structure.
-- [ ] `S10.c` Periksa duplicate IDs.
-- [ ] `S10.d` Periksa broken internal anchors.
-- [ ] `S10.e` Periksa missing accessible names.
-- [ ] `S10.f` Periksa heading hierarchy.
-- [ ] `S10.g` Periksa keyboard operability untuk navigation, tabs, controls, dan copy buttons.
-- [ ] `S10.h` Audit color contrast pada documentation shell dan previews.
-- [ ] `S10.i` Periksa focus visibility.
-- [ ] `S10.j` Periksa responsive overflow.
-- [ ] `S10.k` Periksa asset references dan network dependency.
-- [ ] `S10.l` Verifikasi bahwa semua code block memiliki preview yang sesuai.
-- [ ] `S10.m` Jalankan screenshot comparison pada komponen prioritas.
-- [ ] `S10.n` Tampilkan warning untuk mismatch, bukan menyembunyikannya.
+- [x] `S10.a` Implementasikan `validate-output.mjs`.
+- [x] `S10.b` Validasi HTML structure.
+- [x] `S10.c` Periksa duplicate IDs.
+- [x] `S10.d` Periksa broken internal anchors.
+- [x] `S10.e` Periksa missing accessible names.
+- [x] `S10.f` Periksa heading hierarchy.
+- [x] `S10.g` Periksa keyboard operability untuk navigation, tabs, controls, dan copy buttons.
+- [x] `S10.h` Audit color contrast pada documentation shell dan previews.
+- [x] `S10.i` Periksa focus visibility.
+- [x] `S10.j` Periksa responsive overflow.
+- [x] `S10.k` Periksa asset references dan network dependency.
+- [x] `S10.l` Verifikasi bahwa semua code block memiliki preview yang sesuai.
+- [x] `S10.m` Jalankan screenshot comparison pada komponen prioritas.
+- [x] `S10.n` Tampilkan warning untuk mismatch, bukan menyembunyikannya.
 
 Exit criteria:
 
-- [ ] Tidak ada error validasi kritis.
-- [ ] Warning tersisa tercantum di audit report output.
+- [x] Tidak ada error validasi kritis.
+- [x] Warning tersisa tercantum di audit report output.
 
 ## S11 — Testing
 
